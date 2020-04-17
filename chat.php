@@ -33,6 +33,11 @@ if(isset($_POST["btnEnviar"]) && isset($_POST["txtMensagem"])){
 <html>
 <head>
 <title>Chat</title>
+<!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
 <style>
 .tab{
     background-color:#000;
