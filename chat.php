@@ -34,7 +34,8 @@ if(isset($_POST["btnEnviar"]) && isset($_POST["txtMensagem"])){
 <head>
 <title>Chat</title>
 <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-4.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
@@ -49,11 +50,16 @@ if(isset($_POST["btnEnviar"]) && isset($_POST["txtMensagem"])){
 </style>
 </head>
 <body>
+<div class="cabecalho">
+    <h1>Chat Online</h1>
+</div>
+
 <div style="text-align:center">
  
-<h1>Chat Online</h1>
+
  
-<h2 style="color:#0C3">Você está na Sala <?php echo pega_nome_sala($_SESSION["sala"]);?> <a href="sair.php">Sair da Sala</a></h2>
+<h2 style="color:#0C3">Você está na Sala <?php echo pega_nome_sala($_SESSION["sala"]);?> 
+<a class="btn btn-danger" href="sair.php">Sair da Sala</a></h2>
  
 <hr />
 <form action="chat.php" method="post">
