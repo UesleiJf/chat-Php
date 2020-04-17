@@ -6,6 +6,8 @@ require_once("config.php");
 <html>
 <head>
 <title>Chat</title>
+  <link href="bootstrap-4.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilo.css" rel="stylesheet">
 <style>
 .tab{
     background-color:#000;
@@ -19,33 +21,23 @@ require_once("config.php");
 <body>
 <div style="text-align:center">
  
-<h1>Chat Online</h1>
+<h1 class="h3 mb-3 font-weight-normal">Chat Online</h1>
  
 <hr />
  
-Escolha um Nickname e a Sala
+
  
 <form action="index.php" method="post">
-<table width="200" border="0" cellpadding="0" cellspacing="0" align="center">
-  <tr>
-    <td width="70" class="tab">Nome</td>
-    <td width="130">
-        <input type="text" name="txtNome" id="txtNome" />
-    </td>
-   </tr>
-  <tr>
-    <td class="tab">Sala</td>
-    <td>
-    <select name="slSala"></select>
-    </td>
-    </tr>
-  <tr>
-    <td> </td>
-    <td><label>
-      <input type="submit" name="btnEntrar" id="btnEntrar" value="Entrar" />
-    </label></td>
-    </tr>
-</table>
+  <div class="divcentralizar">
+    <h6 class="font-weight-normal">Informe seu nome e a sala</h6>
+    <input type="text" name="txtNome" id="txtNome" class="form-control margininferior" placeholder="Nome" required autofocus>
+    <label class="alinharesquerda">Sala</label>
+    <select class="btn btn-info dropdown-toggle alinharesquerda" type="button" name="slSala" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Sala" required>
+    </select>
+    <label class="alinhardireita">
+    <input type="submit" name="btnEntrar" id="btnEntrar" value="Entrar" class="btn btn-success"/>
+    </label>
+  </div>
 </form>
  
  
