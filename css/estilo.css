@@ -1,0 +1,41 @@
+body {
+	background: #eee;
+}
+
+.cabecalho {
+	display: block;
+	background: #cecece;
+	width: 80%;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.divcentralizar{
+	display: block;
+	padding: 10px;
+	height: 140px;
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+	background: #eee;
+}
+
+.margininferior {
+	margin-bottom: 15px;
+}
+
+.alinharesquerda {
+	float: left;
+	margin-right: 5px;
+}
+
+.alinhardireita {
+	float: right;
+	margin-left: 5px;
+}
+
+.margemdireita {
+	margin-right: 15px;
+}
