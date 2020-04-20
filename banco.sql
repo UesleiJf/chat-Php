@@ -10,7 +10,6 @@ CREATE TABLE IF NOT EXISTS `interacoes` (
   `nm_destinatario` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-
 --
 -- Estrutura da tabela `salas`
 --
@@ -21,14 +20,12 @@ CREATE TABLE IF NOT EXISTS `salas` (
   PRIMARY KEY (`id_sala`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
-
 INSERT INTO `salas` (`id_sala`, `nm_sala`) VALUES
 (1, 'Programação'),
 (2, 'Jogos'),
 (3, 'Música');
 
 -- --------------------------------------------------------
-
 --
 -- Estrutura da tabela `usuarios`
 --
