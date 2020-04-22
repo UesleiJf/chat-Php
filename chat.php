@@ -62,7 +62,7 @@
             <table width="709" border="1" align="center" cellpadding="0" cellspacing="0" class="tabelasemborda">
                <tr class="tabelasemborda">
                   <td colspan="2" width="516">
-                     <iframe src="interacao.php" width="200px" height="400px" frameborder="0" scrolling="yes"></iframe> 
+                     <iframe src="interacao.php" width="520px" height="400px" frameborder="0" scrolling="yes"></iframe> 
                   </td>
                   <td width="50">
                      <?php require_once("users-online.php");?> 

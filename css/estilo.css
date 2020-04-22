@@ -57,3 +57,7 @@ body {
 .tabelasembordadireita {
 	border-right: none !important;
 }
+
+.corusuario {
+	background: #000;	
+}

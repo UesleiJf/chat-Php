@@ -42,8 +42,11 @@
           
          while($lChat = $tbChat->fetch(PDO::FETCH_ASSOC)){
              $chat = $lChat["nm_destinatario"] == ""?strip_tags($lChat["ds_interacao"]):"fala com <strong>$lChat[nm_destinatario]:</strong><span style='color:#006699'> " . strip_tags($lChat["ds_interacao"]) . "</span>";
-             echo "<div style='font-family:tahoma;font-size:12px;padding:4px'>";
-             echo "<strong>$lChat[nm_usuario]</strong> $chat <span style='color:#cccccc'>$lChat[dt_interacao]</span>";
+             echo "<div style='font-family:tahoma;font-size:12px;padding:4px;'>";
+
+             echo "<strong class='corusuario'>
+                      $lChat[nm_usuario]
+                  </strong> $chat <span style='color:#cccccc'>$lChat[dt_interacao]</span>";
              echo "</div>";
          }
           
