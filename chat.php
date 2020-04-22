@@ -50,22 +50,41 @@
       </style>
    </head>
    <body>
-      <a class="btn btn-danger alinhardireita margemdireita" href="sair.php">Sair da Sala</a>
+      <a class="btn btn-danger alinhardireita margemdireita margemsuperior" href="sair.php">Sair da Sala</a>
       <div class="cabecalho">
          <p><b>Chat Online</b></p>
-         Sala: <b><?php echo pega_nome_sala($_SESSION["sala"]);?> </b>
+         Sala: <b><?php echo pega_nome_sala($_SESSION["sala"]); echo " /";?> </b>
+         Usuário: <b><?php echo $_SESSION["user_name"];?> </b>
       </div>
       <div style="text-align:center">
          <hr />
          <form action="chat.php" method="post">
-            <table width="709" border="1" align="center" cellpadding="0" cellspacing="0">
-               <tr>
-                  <td width="516"><iframe src="interacao.php" width="500px" height="500px" frameborder="0" scrolling="yes"></iframe> </td>
-                  <td width="4"> </td>
-                  <td width="189"><?php require_once("users-online.php");?> </td>
+            <table width="709" border="1" align="center" cellpadding="0" cellspacing="0" class="tabelasemborda">
+               <tr class="tabelasemborda">
+                  <td colspan="2" width="516">
+                     <iframe src="interacao.php" width="200px" height="400px" frameborder="0" scrolling="yes"></iframe> 
+                  </td>
+                  <td width="50">
+                     <?php require_once("users-online.php");?> 
+                  </td>
                </tr>
-               <tr>
-                  <td colspan="3"><?php require_once("writing.php");?> </td>
+               <tr class="tabelasemborda">
+                  <td class="tabelasembordadireita"></td>
+                  <td class="tabelasemborda" colspan="2">
+                     <?php require_once("writing.php");?> 
+                  </td>
+               </tr>
+               <tr class="tabelasemborda">
+                  <td class="tabelasemborda"></td>
+                  <td class="tabelasemborda">
+                     Login em: 
+                           <b>
+                              <?php 
+                                 $hora = explode(" ", $_SESSION["data_logon"]);
+                                 echo $hora[1];
+                              ?> 
+                           </b>
+                  </td>
                </tr>
             </table>
          </form>
