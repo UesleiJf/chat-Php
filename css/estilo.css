@@ -39,3 +39,21 @@ body {
 .margemdireita {
 	margin-right: 15px;
 }
+
+.margemsuperior {
+	margin-top: 15px;
+}
+
+.centro {
+	padding-top: 15px;
+	text-align: center;
+	float: right;
+}
+
+.tabelasemborda {
+	border: none !important;
+}
+
+.tabelasembordadireita {
+	border-right: none !important;
+}
