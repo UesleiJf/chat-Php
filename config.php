@@ -7,4 +7,9 @@
 	$senha = "root";
 
 	//instancia um objeto da classe PDO chamado $conn
-	$conn = new PDO("$tipo_servidor:host=$servidor;dbname=$nome_do_banco",$usuario,$senha);
+	$conn = new PDO("$tipo_servidor:host=$servidor;dbname=$nome_do_banco",$usuario,$senha, 
+				array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
+		              PDO::ATTR_PERSISTENT => false,
+		              PDO::ATTR_EMULATE_PREPARES => false,
+		              PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+            		));
