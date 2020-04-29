@@ -24,7 +24,6 @@
    $to = isset($_POST["slUsers"])?$_POST["slUsers"]:"";
     
    //Verifica se o usuário enviou alguma mensagem, caso positivo, ele chama a função interagir passando os dados do respectivo usuário como parâmetro.
-    
    if(isset($_POST["btnEnviar"]) && isset($_POST["txtMensagem"])){
        interagir($_SESSION["user_name"], $to, $_SESSION["sala"], strip_tags($_POST["txtMensagem"]) );
    }
