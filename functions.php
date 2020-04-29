@@ -1,6 +1,4 @@
 <?php
-   //--------------------------------------------------------------------Funções específicas do Chat:
-    
    //Cria as interações na tabela interações.
    function interagir($from, $to, $sala, $chat){
        global $conn;
