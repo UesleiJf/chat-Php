@@ -6,7 +6,6 @@ if(!isset($_SESSION["user"])){
 }
  
 //Cria a lista com todos os usuários online na respectiva sala.
- 
 $tbUsers = $conn->prepare("select * from usuarios where id_sala=:sala");
 $tbUsers->bindParam(":sala", $_SESSION["sala"], PDO::PARAM_STR);
 $tbUsers->execute();
