@@ -49,7 +49,7 @@
       </style>
    </head>
    <body>
-      <a class="btn btn-danger alinhardireita margemdireita margemsuperior" href="sair.php">Sair da Sala</a>
+      <a class="btn btn-danger alinhardireita margemdireita margemsuperior" href="logout.php">Sair da Sala</a>
       <div class="cabecalho">
          <p><b>Chat Online</b></p>
          Sala: <b><?php echo pega_nome_sala($_SESSION["sala"]); echo " /";?> </b>
