@@ -38,9 +38,5 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
---
--- Extraindo dados da tabela `usuarios`
---
-
 INSERT INTO `usuarios` (`id_usuario`, `nm_usuario`, `id_sala`, `dt_refresh`) VALUES
 (1, 'Ueslei', 3, '2020-04-17 12:00:00');
