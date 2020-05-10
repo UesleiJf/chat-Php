@@ -49,7 +49,6 @@
                   </strong> $chat <span style='color:#cccccc'>$lChat[dt_interacao]</span>";
              echo "</div>";
          }
-          
-         ?>
+?>
    </body>
 </html>
