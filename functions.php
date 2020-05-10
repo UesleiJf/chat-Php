@@ -33,7 +33,6 @@
        $_SESSION["data_logon"] = $now;
        interagir($_SESSION["user_name"], "", $_SESSION["sala"], "Entrou na sala.");
        header("Location: chat.php");
-       
    }
     
     
@@ -150,12 +149,10 @@
        return preg_match($pattern, $value);
    }
     
-    
    function isDate($date){
        $char = strpos($date, "/")!==false?"/":"-";
        $date_array = explode($char,$date);
        if(count($date_array)!=3) return false;
        return checkdate($date_array[1],$date_array[0],$date_array[2])?($date_array[2] . "-" . $date_array[1] . "-" . $date_array[0]):false;
    }
-    
-   ?>
+?>
