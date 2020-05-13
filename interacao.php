@@ -16,9 +16,10 @@
    </head>
    <body onLoad="pageScroll()">
       <script>
+         // horizontal and vertical scroll increments
+         //scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
          function pageScroll() {
-                         window.scrollBy(0,1000000); // horizontal and vertical scroll increments
-                         //scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
+         window.scrollBy(0,1000000); 
          }
           
       </script>
@@ -39,7 +40,6 @@
          $tbChat->bindParam(":sala", $_SESSION["sala"], PDO::PARAM_INT);
          $tbChat->execute();
           
-          
          while($lChat = $tbChat->fetch(PDO::FETCH_ASSOC)){
              $chat = $lChat["nm_destinatario"] == ""?strip_tags($lChat["ds_interacao"]):"fala com <strong>$lChat[nm_destinatario]:</strong><span style='color:#006699'> " . strip_tags($lChat["ds_interacao"]) . "</span>";
              echo "<div style='font-family:tahoma;font-size:12px;padding:4px;'>";
@@ -49,6 +49,6 @@
                   </strong> $chat <span style='color:#cccccc'>$lChat[dt_interacao]</span>";
              echo "</div>";
          }
-?>
+      ?>
    </body>
 </html>
