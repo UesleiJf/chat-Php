@@ -2,11 +2,13 @@
    session_start();
    require_once("config.php");
    require_once("functions.php");
+
    //Verifica se a sessão existe
    if(!isset($_SESSION["user"])){
        header("Location: index.php");
        exit();
    }
+   
    //Verifica se o usuário já foi excluído do banco
    $tbUser = $conn->prepare("select count(*) as total from usuarios where id_usuario=:id");
    $tbUser->bindParam(":id",$_SESSION["user"], PDO::PARAM_INT);
@@ -26,7 +28,7 @@
        interagir($_SESSION["user_name"], $to, $_SESSION["sala"], strip_tags($_POST["txtMensagem"]) );
    }
     
-   ?>
+?>
 <html>
    <head>
       <title>Chat</title>
@@ -75,12 +77,12 @@
                   <td class="tabelasemborda"></td>
                   <td class="tabelasemborda">
                      Login em: 
-                           <b>
-                              <?php 
-                                 $hora = explode(" ", $_SESSION["data_logon"]);
-                                 echo $hora[1];
-                              ?> 
-                           </b>
+                        <b>
+                           <?php 
+                              $hora = explode(" ", $_SESSION["data_logon"]);
+                              echo $hora[1];
+                           ?> 
+                        </b>
                   </td>
                </tr>
             </table>
