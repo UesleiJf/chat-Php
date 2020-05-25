@@ -16,6 +16,8 @@ INSERT INTO `salas` (`id_sala`, `nm_sala`) VALUES
 (1, 'Programação'),
 (2, 'Jogos'),
 (3, 'Música');
+(4, 'Esportes');
+(5, 'Livros');
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
@@ -34,4 +36,4 @@ INSERT INTO `usuarios` (`id_usuario`, `nm_usuario`, `id_sala`, `dt_refresh`) VAL
 INSERT INTO `usuarios` (`id_usuario`, `nm_usuario`, `id_sala`, `dt_refresh`) VALUES
 (4, 'Usuario4', 1, '2020-04-17 12:00:00');
 INSERT INTO `usuarios` (`id_usuario`, `nm_usuario`, `id_sala`, `dt_refresh`) VALUES
-(5, 'Usuario5', 2, '2020-04-17 12:00:00');
+(5, 'Usuario5', 5, '2020-04-17 12:00:00');
