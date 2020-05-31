@@ -8,8 +8,8 @@
        header("Location: index.php");
        exit();
    }
-    
-   ?>
+
+ ?>
 <html>
    <head>
       <META HTTP-EQUIV="Refresh" CONTENT="6;URL=interacao.php">
