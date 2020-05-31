@@ -3,6 +3,7 @@
    require_once("config.php");
    require_once("functions.php");
 
+
    //Verifica se a sessão existe
    if(!isset($_SESSION["user"])){
        header("Location: index.php");
