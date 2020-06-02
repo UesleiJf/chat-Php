@@ -2,9 +2,11 @@
    session_start();
    require_once("config.php"); 
    require_once("functions.php");
+   
    //Pega o nome e a sala que o usuário soliciou entrar
    $nome = isset($_POST["txtNome"])?strip_tags($_POST["txtNome"]):"";
    $sala = isset($_POST["slSala"])?(int)$_POST["slSala"]:1;  
+
    //Se o nome não estiver em branco, executa uma rotina de limpeza delete_olde_entries() e inicia o chat.
    if(!empty($nome)){
        delete_old_entries();
@@ -16,15 +18,6 @@
       <title>Chat</title>
       <link href="bootstrap-4.0/css/bootstrap.min.css" rel="stylesheet">
       <link href="css/estilo.css" rel="stylesheet">
-      <style>
-         .tab{
-         background-color:#000;
-         color:#FFF;
-         font-size:12px;
-         font-weight:bold;
-         padding:4px;
-         }
-      </style>
    </head>
    <body>
       <div style="text-align:center">
