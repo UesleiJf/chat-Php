@@ -1,10 +1,10 @@
 <?php
    //Cria as interações na tabela interações.
    function interagir($from, $to, $sala, $chat){
+       
        global $conn;
        
        $now = date("Y-m-d H:i:s");
-       
        $tbInt = $conn->prepare("insert into interacoes values(:nome, :sala, :data, :chat, :to)");
        $tbInt->bindParam(":nome", $from, PDO::PARAM_STR);
        $tbInt->bindParam(":sala", $sala, PDO::PARAM_INT);
