@@ -28,16 +28,13 @@
    if(isset($_POST["btnEnviar"]) && isset($_POST["txtMensagem"])){
        interagir($_SESSION["user_name"], $to, $_SESSION["sala"], strip_tags($_POST["txtMensagem"]) );
    }
-    
 ?>
 <html>
    <head>
       <title>Chat</title>
-      <!-- Bootstrap core CSS -->
       <link href="bootstrap-4.0/css/bootstrap.min.css" rel="stylesheet">
       <link href="css/estilo.css" rel="stylesheet">
       <meta charset="utf-8"/>
-      <!-- Custom styles for this template -->
       <link href="signin.css" rel="stylesheet">
       <style>
          .tab{
