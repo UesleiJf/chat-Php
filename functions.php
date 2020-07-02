@@ -1,4 +1,4 @@
-<?php
+-<?php
    //Cria as interações na tabela interações.
    function interagir($from, $to, $sala, $chat){
        
@@ -15,6 +15,7 @@
    }
     
    //Insere o usuário na tabela ususarios, configura as sessões, cria a interação de entrada na sala e redireciona o usuário para a página principal do chat.
+
    function start_chat(){
        global $conn, $nome, $sala;
        
@@ -37,6 +38,7 @@
     
     
    //Função que garante um nome única na respectiva sala. Caso o nome já existe, essa função insere um underline no final do nome e vai incrementando valores até que o nome gerado não tenha sido utiliado por outro usuário ativo na sala.
+
    function get_unique_name($nome_original, $nome_alterado, $repetido=1){
        global $conn, $sala;
        
