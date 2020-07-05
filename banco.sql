@@ -6,11 +6,13 @@ CREATE TABLE IF NOT EXISTS `interacoes` (
   `nm_destinatario` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+
 CREATE TABLE IF NOT EXISTS `salas` (
   `id_sala` int(11) NOT NULL AUTO_INCREMENT,
   `nm_sala` varchar(20) NOT NULL,
   PRIMARY KEY (`id_sala`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
 
 INSERT INTO `salas` (`id_sala`, `nm_sala`) VALUES
 (1, 'Programação'),
@@ -19,6 +21,7 @@ INSERT INTO `salas` (`id_sala`, `nm_sala`) VALUES
 (4, 'Esportes');
 (5, 'Livros');
 
+
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `nm_usuario` varchar(20) NOT NULL,
@@ -26,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `dt_refresh` datetime NOT NULL,
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+
 
 INSERT INTO `usuarios` (`id_usuario`, `nm_usuario`, `id_sala`, `dt_refresh`) VALUES
 (1, 'Ueslei', 1, '2020-04-17 12:00:00');
