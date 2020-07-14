@@ -1,8 +1,8 @@
-### README
+#### README
 
 - Chat construído em Php;
 - Banco Mysql;
-- Vue;
+- VueJS;
 - Yii2;
 - Bootstrap;
 
